@@ -10,6 +10,9 @@ import UserForm from "./views/UserForm";
 import CreateProduct from "./views/CreateProduct.jsx";
 import AllProducts from "./views/AllProducts.jsx";
 import './index.css'
+import Home from "./pages/Home.jsx";
+import Shop from "./pages/Shop.jsx";
+import Cart from "./pages/Cart.jsx";
 const router = createBrowserRouter([
   {
     path: '/',
@@ -54,13 +57,25 @@ const router = createBrowserRouter([
     element: <GuestLayout/>,
     children: [
       {
+        path: '/home',
+        element: <Home/>
+      },
+      {
         path: '/login',
         element: <Login/>
       },
       {
         path: '/signup',
         element: <Signup/>
-      }
+      },
+      {
+        path: '/shop',
+        element: <Shop/>
+      },
+      {
+        path: '/cart',
+        element: <Cart/>
+      },
     ]
   },
   {

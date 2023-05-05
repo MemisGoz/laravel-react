@@ -72,7 +72,7 @@ export default function AllProducts() {
                   <img className="col-span-6" src={`http://localhost:8000/${p.product_image}`} alt="Product" />
                   {console.log(p.product_image)}
                   <td>
-                    <Link className="btn-edit" to={`/products/${p.id}`}>
+                    <Link className="btn-edit" to={'/products/' + p.id}>
                       Edit
                     </Link>
                     &nbsp;

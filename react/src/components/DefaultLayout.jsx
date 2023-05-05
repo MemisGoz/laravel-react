@@ -2,12 +2,12 @@ import {Link, Navigate, Outlet} from "react-router-dom";
 import {useStateContext} from "../context/ContextProvider";
 import axiosClient from "../axios-client.js";
 import {useEffect} from "react";
-
+import Nav from "./Nav";
 export default function DefaultLayout() {
   const {user, token, setUser, setToken, notification} = useStateContext();
 
   if (!token) {
-    return <Navigate to="/login"/>
+    return <Navigate to="/home"/>
   }
 
   const onLogout = ev => {
@@ -24,12 +24,14 @@ export default function DefaultLayout() {
     axiosClient.get('/user')
       .then(({data}) => {
          setUser(data)
+        
       })
   }, [])
 
   return (
 
 <>
+<Nav/>
     <div className="navbar bg-base-100 pb-40 pt-1">
         <div className="flex-1">
           <Link to="/" className="btn btn-ghost normal-case text-xl">Shoe'Fix</Link>

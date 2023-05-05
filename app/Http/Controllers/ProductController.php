@@ -46,7 +46,7 @@ class ProductController extends Controller
              'product_name' => 'required',
              'product_description' => 'required',
              'product_price' => 'required',
-             'product_image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:6048'
+             'product_image' => 'required|max:6048'
          ]);
      
          try {
@@ -130,7 +130,7 @@ class ProductController extends Controller
             'product_name' => 'required',
             'product_description' => 'required',
             'product_price' => 'required',
-            'product_image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:6048'
+            'product_image' => 'nullable|max:6048'
         ]);
 
         if($request->hasFile('product_image')){
