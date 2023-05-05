@@ -1,5 +1,7 @@
 # Laravel React Webshop 
-Application build with Laravel and React
+Application build with Laravel and React.
+this application is a shoe webshop that uses our laravel rest API and the user can see our products add to cart and also admin can use crud functionalities, POST, PUT, DELETE.
+
 
 > 
 
